@@ -295,4 +295,4 @@ Last we can now connect the dynatrace API using the http output plugin
 ```
 
 Let's open go to [calyptia](https://cloud.calyptia.com/) to visualize our log stream pipeline:
-<p align="center"><img src="/image/log_stream_pipeline.png" width="60%" alt="grafana explore" /></p>
+<p align="center"><img src="/image/log_stream_pipeline.PNG" width="60%" alt="grafana explore" /></p>
