@@ -1,0 +1,78 @@
+apiVersion: v1
+data:
+  fluent-bit.conf: |-
+    [SERVICE]
+        HTTP_Server    On
+        HTTP_Listen    0.0.0.0
+        HTTP_PORT      2020
+        Flush          1
+        Daemon         Off
+        Log_Level      warn
+        Parsers_File   parsers.conf
+
+    [INPUT]
+        Name           tail
+        Tag            kube.*
+        Path           /var/log/containers/*.log
+        Parser         docker
+        DB             /run/fluent-bit/flb_kube.db
+        Mem_Buf_Limit  5MB
+
+    [FILTER]
+        Name           kubernetes
+        Match          kube.*
+        Kube_URL       https://kubernetes.default.svc:443
+        Merge_Log On
+        K8S-Logging.Exclude Off
+        K8S-Logging.Parser Off
+
+
+
+    [OUTPUT]
+        Name grafana-loki
+        Match *
+        Url http://loki:3100/api/prom/push
+        TenantID ""
+        BatchWait 1
+        BatchSize 1048576
+        Labels {job="fluent-bit",stream=$stream }
+        RemoveKeys kubernetes,stream
+        AutoKubernetesLabels true
+        LabelMapPath /fluent-bit/etc/labelmap.json
+        LineFormat json
+        LogLevel warn
+
+
+
+  labelmap.json: |-
+    {
+      "kubernetes": {
+        "container_name": "container",
+        "host": "node",
+        "labels": {
+          "app": "app",
+          "release": "release"
+        },
+        "namespace_name": "namespace",
+        "pod_name": "instance"
+      },
+      "stream": "stream"
+    }
+  parsers.conf: |-
+    [PARSER]
+        Name        docker
+        Format      json
+        Time_Key    time
+        Time_Format %Y-%m-%dT%H:%M:%S.%L
+kind: ConfigMap
+metadata:
+  annotations:
+    meta.helm.sh/release-name: dynatrace
+    meta.helm.sh/release-namespace: default
+  labels:
+    app: fluent-bit-loki
+    chart: fluent-bit-2.2.0
+    heritage: Helm
+  name: loki-fluent-bit-loki
+  namespace: default
+

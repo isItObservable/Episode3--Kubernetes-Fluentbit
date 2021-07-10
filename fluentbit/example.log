@@ -1,0 +1,94 @@
+[1mFluent Bit v1.7.9[0m
+* [1m[93mCopyright (C) 2019-2021 The Fluent Bit Authors[0m
+* [1m[93mCopyright (C) 2015-2018 Treasure Data[0m
+* Fluent Bit is a CNCF sub-project under the umbrella of Fluentd
+* https://fluentbit.io
+
+[2021/07/08 07:46:26] [ info] [engine] started (pid=1)
+[2021/07/08 07:46:26] [ info] [storage] version=1.1.1, initializing...
+[2021/07/08 07:46:26] [ info] [storage] in-memory
+[2021/07/08 07:46:26] [ info] [storage] normal synchronization mode, checksum disabled, max_chunks_up=128
+[2021/07/08 07:46:26] [ info] [filter:kubernetes:kubernetes.1] https=1 host=kubernetes.default.svc port=443
+[2021/07/08 07:46:26] [ info] [filter:kubernetes:kubernetes.1] local POD info OK
+[2021/07/08 07:46:26] [ info] [filter:kubernetes:kubernetes.1] testing connectivity with API server...
+[2021/07/08 07:46:26] [ info] [filter:kubernetes:kubernetes.1] connectivity OK
+[2021/07/08 07:46:26] [ info] [http_server] listen iface=0.0.0.0 tcp_port=2020
+[2021/07/08 07:46:26] [ info] [sp] stream processor started
+[2021/07/08 07:46:26] [ info] [input:tail:tail.0] inotify_fs_add(): inode=1049222 watch_fd=1 name=/var/log/containers/bpf-exporter-gl999_default_bpf-exporter-e9dcc6c208ec72f3ae47f092ba64fe230580f6d2b042376b7e15d21855e25299.log
+[2021/07/08 07:46:26] [ info] [input:tail:tail.0] inotify_fs_add(): inode=1049300 watch_fd=2 name=/var/log/containers/carts-577d7858c8-jxkhq_sockshop-dev_carts-8a0098e8543be7704d1727e9eb4bf33d2a931be844f1199f15240aa6803af8fb.log
+[2021/07/08 07:46:26] [ info] [input:tail:tail.0] inotify_fs_add(): inode=1049347 watch_fd=3 name=/var/log/containers/carts-786dcc48b5-b6np2_sockshop-production_carts-6d6201e6b3b80329cf8c3d99bb230b6cbc729e93ab7555d1e08902e20b46f926.log
+[2021/07/08 07:46:26] [ info] [input:tail:tail.0] inotify_fs_add(): inode=1049311 watch_fd=4 name=/var/log/containers/carts-786dcc48b5-b6np2_sockshop-production_istio-init-77cc0bd7694a155ebb019df526fe02e3e98db19fa2f74030df0673b23f7df66b.log
+[2021/07/08 07:46:26] [ info] [input:tail:tail.0] inotify_fs_add(): inode=1049421 watch_fd=5 name=/var/log/containers/carts-786dcc48b5-b6np2_sockshop-production_istio-proxy-6c10b3a110d93aa1b12d1d4b9c0f7b160f36d7f31c12d08fadc0dce083b3a9da.log
+[2021/07/08 07:46:26] [ info] [input:tail:tail.0] inotify_fs_add(): inode=1049322 watch_fd=6 name=/var/log/containers/cartservice-67dc579847-gmpvv_hipster-shop_server-6549d31224680f344cf6a3ceca40c05e4576f22940285b8a5ae4ff64fdb8ab0d.log
+[2021/07/08 07:46:26] [ info] [input:tail:tail.0] inotify_fs_add(): inode=1049554 watch_fd=7 name=/var/log/containers/catalogue-78cb56f58b-h974v_sockshop-dev_catalogue-5f89f209bdc55b8c4a7fd543d7644f15d88fc45b32e35716f76aac6f27ae6b44.log
+[2021/07/08 07:46:26] [ info] [input:tail:tail.0] inotify_fs_add(): inode=1049480 watch_fd=8 name=/var/log/containers/catalogue-78cb56f58b-h974v_sockshop-dev_catalogue-712b9a9c22729a98b714753926a246f209cda1428880227ccc30870814b8d86b.log
+[2021/07/08 07:46:26] [ info] [input:tail:tail.0] inotify_fs_add(): inode=1049183 watch_fd=9 name=/var/log/containers/cert-manager-85db5c4c87-grkcf_cert-manager_cert-manager-197dbf72e0a316f2406e1cc6754bc187781e218fc9432c80cb2c0ed1766cb7fc.log
+[2021/07/08 07:46:26] [ info] [input:tail:tail.0] inotify_fs_add(): inode=1049447 watch_fd=10 name=/var/log/containers/cert-manager-85db5c4c87-grkcf_cert-manager_cert-manager-51f45f7b7b5ffb668fe0b014318fbe2b8825de688d3995131a7f9328bcb9161d.log
+[2021/07/08 07:46:26] [ info] [input:tail:tail.0] inotify_fs_add(): inode=1049238 watch_fd=11 name=/var/log/containers/cert-manager-cainjector-7959549c78-djb27_cert-manager_cert-manager-4fd5b263b7e9fab974d4d81f0ea4d7ac5b10857ded6d6e702a543a2219cd7826.log
+[2021/07/08 07:46:26] [ info] [input:tail:tail.0] inotify_fs_add(): inode=1049536 watch_fd=12 name=/var/log/containers/cert-manager-cainjector-7959549c78-djb27_cert-manager_cert-manager-5e3d21dab39111e6230a66eedb501b3b65503cae746f88e5754d17117d3d145f.log
+[2021/07/08 07:46:26] [ info] [input:tail:tail.0] inotify_fs_add(): inode=1049248 watch_fd=13 name=/var/log/containers/cert-manager-webhook-5c8696f555-hvrwk_cert-manager_cert-manager-a7b0a7e3e9216a82cc9ba3ba482b1d9af0d144860504951a25d2a63ae1223045.log
+[2021/07/08 07:46:26] [ info] [input:tail:tail.0] inotify_fs_add(): inode=393709 watch_fd=14 name=/var/log/containers/dynakube-classic-sdgx9_dynatrace_dynatrace-oneagent-14d1da33dc729ec52cfb5bc927f0b87a7571525b8eddd5b8804be9131498a7fb.log
+[2021/07/08 07:46:26] [ info] [input:tail:tail.0] inotify_fs_add(): inode=393691 watch_fd=15 name=/var/log/containers/fluentbit-gke-4d9kx_kube-system_fluentbit-8404d35ea7a54042d84adb530269348a7d46b956a6881de8c9c0ca2e97f9e5c1.log
+[2021/07/08 07:46:26] [ info] [input:tail:tail.0] inotify_fs_add(): inode=787402 watch_fd=16 name=/var/log/containers/fluentbit-gke-4d9kx_kube-system_fluentbit-gke-a9262a8c00c99f692c50670f70bd0911543a518e54356b0dc37f2db31de89fa6.log
+[2021/07/08 07:46:26] [ info] [input:tail:tail.0] inotify_fs_add(): inode=1049218 watch_fd=17 name=/var/log/containers/gke-metrics-agent-s79tc_kube-system_gke-metrics-agent-d3961f0673f128732b8950234a04916863f6383a7f016981b99a8419be262698.log
+[2021/07/08 07:46:26] [ info] [input:tail:tail.0] inotify_fs_add(): inode=791580 watch_fd=18 name=/var/log/containers/istiod-7fd6d8d4d9-thvwx_istio-system_discovery-4f211ecd68f15a63fafcbb399ace077716542793a5c1102384d8029aa2f8d807.log
+[2021/07/08 07:46:26] [ info] [input:tail:tail.0] inotify_fs_add(): inode=791619 watch_fd=19 name=/var/log/containers/jenkins-0_jenkins_config-reload-a95a9921705ea22e39ae59e96e1be254fa5c8e2a11e035515c784e94a5a0593e.log
+[2021/07/08 07:46:26] [ info] [input:tail:tail.0] inotify_fs_add(): inode=791595 watch_fd=20 name=/var/log/containers/jenkins-0_jenkins_init-a316b6c6a883ebd89e9b7bf8dfeccd69b889bab9c14d4620d212ca7d855fdaf7.log
+[2021/07/08 07:46:26] [ info] [input:tail:tail.0] inotify_fs_add(): inode=791606 watch_fd=21 name=/var/log/containers/jenkins-0_jenkins_jenkins-227a5784bad1e9c148754e39cb5417c2ca988b0f52ef92960c90b6d47965d7d2.log
+[2021/07/08 07:46:26] [ info] [input:tail:tail.0] inotify_fs_add(): inode=1049157 watch_fd=22 name=/var/log/containers/kube-dns-autoscaler-58cbd4f75c-5lll2_kube-system_autoscaler-fbdebce8d893a0ebbf8d6c493a5eb886813fdb0e2bbe78854a25eeda21c7e15f.log
+[2021/07/08 07:46:26] [ info] [input:tail:tail.0] inotify_fs_add(): inode=392152 watch_fd=23 name=/var/log/containers/kube-proxy-gke-onlineboutique-default-pool-112e98a2-j5zr_kube-system_kube-proxy-627e75b14616a7d8f8537097f5c5f8b81aad1ba29e65a26035b4e497eeb19ec7.log
+[2021/07/08 07:46:26] [ info] [input:tail:tail.0] inotify_fs_add(): inode=1049395 watch_fd=24 name=/var/log/containers/l7-default-backend-5d7d4cfccb-p49hr_kube-system_default-http-backend-24f574f8dc22bc7ad00aa06d5dd15bf6fbdd1f05ad683ba4e69cf15cef2871d9.log
+[2021/07/08 07:46:26] [ info] [input:tail:tail.0] inotify_fs_add(): inode=1049194 watch_fd=25 name=/var/log/containers/loadgenerator-d8bd99bbb-dpvbz_hipster-shop_main-6b2060091b8104d4589a239dd166c34abdeef6463828d44f8027736973f21503.log
+[2021/07/08 07:46:26] [ info] [input:tail:tail.0] inotify_fs_add(): inode=1049491 watch_fd=26 name=/var/log/containers/loki-fluent-bit-loki-pdk9r_default_fluent-bit-loki-dc34ab33660b96613da6cf468f7c3668ac28b578c69f343a4c2018fa3125ed09.log
+[2021/07/08 07:46:26] [ info] [input:tail:tail.0] inotify_fs_add(): inode=1049170 watch_fd=27 name=/var/log/containers/metrics-server-v0.3.6-7b5cdbcbb8-bph4r_kube-system_metrics-server-8f08bc7337df20b0614a37845bc009ba4476743f9c5f38c100ce864e4ace19cc.log
+[2021/07/08 07:46:26] [ info] [input:tail:tail.0] inotify_fs_add(): inode=1049196 watch_fd=28 name=/var/log/containers/metrics-server-v0.3.6-7b5cdbcbb8-bph4r_kube-system_metrics-server-nanny-2ce380a67f5460e269b2b3697002fe85e05eaf74b188611db1d7f85912254588.log
+[2021/07/08 07:46:26] [ info] [input:tail:tail.0] inotify_fs_add(): inode=1049327 watch_fd=29 name=/var/log/containers/payment-54c476fb7f-fq75n_sockshop-production_istio-init-7d3c45303c9f0e479d0462f25d96857aad3d752338b2d4cd7c82c20c4b196bb6.log
+[2021/07/08 07:46:26] [ info] [input:tail:tail.0] inotify_fs_add(): inode=1049434 watch_fd=30 name=/var/log/containers/payment-54c476fb7f-fq75n_sockshop-production_istio-proxy-232a1b6f2894da4eab65e90cef01d9e87c9a65fe6708fdcce27ae629d10b9fe7.log
+[2021/07/08 07:46:26] [ info] [input:tail:tail.0] inotify_fs_add(): inode=1049345 watch_fd=31 name=/var/log/containers/payment-54c476fb7f-fq75n_sockshop-production_payment-866fef4278ce092377e137fc3fac3c4b04d93124eaad49ca4ada78ae9b24e5bb.log
+[2021/07/08 07:46:26] [ info] [input:tail:tail.0] inotify_fs_add(): inode=787565 watch_fd=32 name=/var/log/containers/pdcsi-node-789r7_kube-system_csi-driver-registrar-428ef51049f3b041e59fb7b58ce3af46285cd21769944a2ab4b6fbf38c53265d.log
+[2021/07/08 07:46:26] [ info] [input:tail:tail.0] inotify_fs_add(): inode=791557 watch_fd=33 name=/var/log/containers/pdcsi-node-789r7_kube-system_gce-pd-driver-18ccb980efba47d0b533fdef9b43d3eb29daeb58de9342e8720272f1ea227975.log
+[2021/07/08 07:46:26] [ info] [input:tail:tail.0] inotify_fs_add(): inode=792102 watch_fd=34 name=/var/log/containers/prometheus-prometheus-node-exporter-kbmwf_default_node-exporter-36653e544214ba40a73dc7d55b7c05a4a58f87f2a4e2ff3d97a3bb3b2285fb72.log
+[2021/07/08 07:46:26] [ info] [input:tail:tail.0] inotify_fs_add(): inode=1049287 watch_fd=35 name=/var/log/containers/redis-cart-78fdcbd75b-z6cqr_hipster-shop_redis-b1e4626defb23264f425b41fd231978472ef656543a79c9c8de85d422a04465d.log
+[2021/07/08 07:46:26] [ info] [input:tail:tail.0] inotify_fs_add(): inode=1049382 watch_fd=36 name=/var/log/containers/redis-cart-78fdcbd75b-z6cqr_hipster-shop_redis-exporter-ca3d41d4f15a68ff863cb73a8919faaa8767a4533c4c862e59de7d441d6b2b91.log
+[2021/07/08 07:46:26] [ info] [input:tail:tail.0] inotify_fs_add(): inode=1049225 watch_fd=37 name=/var/log/containers/shippingservice-5fcdc568c8-xbwkm_hipster-shop_server-31182f68b823002ec719581e83825ac8287570c515ac31ef54d9fccbd2acf375.log
+[2021/07/08 07:46:26] [ info] [input:tail:tail.0] inotify_fs_add(): inode=1049527 watch_fd=38 name=/var/log/containers/stackdriver-metadata-agent-cluster-level-5765499975-jfwtf_kube-system_metadata-agent-6dd7c92c90fcd2d8d20ad4b4a080c3b96490b4251123699e71c712b195de209c.log
+[2021/07/08 07:46:26] [ info] [input:tail:tail.0] inotify_fs_add(): inode=1049369 watch_fd=39 name=/var/log/containers/stackdriver-metadata-agent-cluster-level-5765499975-jfwtf_kube-system_metadata-agent-nanny-164fa559e0dc91577ab3feec9d02f3a81ce0907e7da9399a5088b864b6e951a9.log
+[2021/07/08 07:46:26] [ info] [input:tail:tail.0] inotify_fs_add(): inode=1049356 watch_fd=40 name=/var/log/containers/cartservice-67dc579847-gmpvv_hipster-shop_server-5b399fc8b16153d41ea265e2c2fabdd2ce9a4599adae9cfeb7b14a24c9f2c2ac.log
+[{"timestamp":"2021-07-08T07:46:26.737645Z","content":"DEMOABILITY DEBUG: AddItem method called\n","stream":"stdout","k8s.pod.name":"cartservice-67dc579847-gmpvv","k8s.namespace.name":"hipster-shop","k8s.cluster.name":"Onlineboutique"},{"timestamp":"2021-07-08T07:46:26.737698Z","content":"DEMOABILITY DEBUG: inside try clause\n","stream":"stdout","k8s.pod.name":"cartservice-67dc579847-gmpvv","k8s.namespace.name":"hipster-shop","k8s.cluster.name":"Onlineboutique"},{"timestamp":"2021-07-08T07:46:26.737706Z","content":"DEMOABILITY DEBUG: try clause finished correctly\n","stream":"stdout","k8s.pod.name":"cartservice-67dc579847-gmpvv","k8s.namespace.name":"hipster-shop","k8s.cluster.name":"Onlineboutique"},{"timestamp":"2021-07-08T07:46:26.737764Z","content":"DEMOABILITY DEBUG: AddItem getTracerCalled\n","stream":"stdout","k8s.pod.name":"cartservice-67dc579847-gmpvv","k8s.namespace.name":"hipster-shop","k8s.cluster.name":"Onlineboutique"},{"timestamp":"2021-07-08T07:46:26.737770Z","content":"AddItemAsync called with userId=5a9c308c-ff5a-4a47-8822-391808643738, productId=2ZYFJ3GM2N, quantity=4\n","stream":"stdout","k8s.pod.name":"cartservice-67dc579847-gmpvv","k8s.namespace.name":"hipster-shop","k8s.cluster.name":"Onlineboutique"},{"timestamp":"2021-07-08T07:46:26.798800Z","content":"DEMOABILITY DEBUG: GetCart method called\n","stream":"stdout","k8s.pod.name":"cartservice-67dc579847-gmpvv","k8s.namespace.name":"hipster-shop","k8s.cluster.name":"Onlineboutique"},{"timestamp":"2021-07-08T07:46:26.798852Z","content":"DEMOABILITY DEBUG: inside try clause\n","stream":"stdout","k8s.pod.name":"cartservice-67dc579847-gmpvv","k8s.namespace.name":"hipster-shop","k8s.cluster.name":"Onlineboutique"},{"timestamp":"2021-07-08T07:46:26.798860Z","content":"DEMOABILITY DEBUG: try clause finished correctly\n","stream":"stdout","k8s.pod.name":"cartservice-67dc579847-gmpvv","k8s.namespace.name":"hipster-shop","k8s.cluster.name":"Onlineboutique"},{"timestamp":"2021-07-08T07:46:26.798866Z","content":"DEMOABILITY DEBUG: GetCart getTracer called\n","stream":"stdout","k8s.pod.name":"cartservice-67dc579847-gmpvv","k8s.namespace.name":"hipster-shop","k8s.cluster.name":"Onlineboutique"},{"timestamp":"2021-07-08T07:46:26.799742Z","content":"GetCartAsync called with userId=2f9cc5f8-204f-49de-b537-af2f1ac8a471\n","stream":"stdout","k8s.pod.name":"cartservice-67dc579847-gmpvv","k8s.namespace.name":"hipster-shop","k8s.cluster.name":"Onlineboutique"},{"timestamp":"2021-07-08T07:46:26.812423Z","content":"DEMOABILITY DEBUG: GetCart method called\n","stream":"stdout","k8s.pod.name":"cartservice-67dc579847-gmpvv","k8s.namespace.name":"hipster-shop","k8s.cluster.name":"Onlineboutique"},{"timestamp":"2021-07-08T07:46:26.812474Z","content":"DEMOABILITY DEBUG: inside try clause\n","stream":"stdout","k8s.pod.name":"cartservice-67dc579847-gmpvv","k8s.namespace.name":"hipster-shop","k8s.cluster.name":"Onlineboutique"},{"timestamp":"2021-07-08T07:46:26.812482Z","content":"DEMOABILITY DEBUG: try clause finished correctly\n","stream":"stdout","k8s.pod.name":"cartservice-67dc579847-gmpvv","k8s.namespace.name":"hipster-shop","k8s.cluster.name":"Onlineboutique"},{"timestamp":"2021-07-08T07:46:26.812487Z","content":"DEMOABILITY DEBUG: GetCart getTracer called\n","stream":"stdout","k8s.pod.name":"cartservice-67dc579847-gmpvv","k8s.namespace.name":"hipster-shop","k8s.cluster.name":"Onlineboutique"},{"timestamp":"2021-07-08T07:46:26.813357Z","content":"GetCartAsync called with userId=5a9c308c-ff5a-4a47-8822-391808643738\n","stream":"stdout","k8s.pod.name":"cartservice-67dc579847-gmpvv","k8s.namespace.name":"hipster-shop","k8s.cluster.name":"Onlineboutique"}]
+[{"timestamp":"2021-07-08T07:46:26.921217Z","content":"{\"message\":\"[GetQuote] received request\",\"severity\":\"info\",\"timestamp\":\"2021-07-08T07:46:26.920995363Z\"}\n","stream":"stdout","k8s.pod.name":"shippingservice-5fcdc568c8-xbwkm","k8s.namespace.name":"hipster-shop","k8s.cluster.name":"Onlineboutique"},{"timestamp":"2021-07-08T07:46:26.921317Z","content":"{\"message\":\"[GetQuote] completed request\",\"severity\":\"info\",\"timestamp\":\"2021-07-08T07:46:26.921189875Z\"}\n","stream":"stdout","k8s.pod.name":"shippingservice-5fcdc568c8-xbwkm","k8s.namespace.name":"hipster-shop","k8s.cluster.name":"Onlineboutique"}]
+[2021/07/08 07:46:28] [error] [output:http:http.0] ec2-34-243-26-131.eu-west-1.compute.amazonaws.com:9999, HTTP status=400
+<html>
+<head><title>
+Error: 400 Bad Request</title></head>
+<body>Error: 400 Bad Request<br/>Uri: /e/bix24852/api/v2/logs/ingest<br/>
+</body>
+</html>
+
+[2021/07/08 07:46:28] [error] [output:http:http.0] ec2-34-243-26-131.eu-west-1.compute.amazonaws.com:9999, HTTP status=400
+<html>
+<head><title>
+Error: 400 Bad Request</title></head>
+<body>Error: 400 Bad Request<br/>Uri: /e/bix24852/api/v2/logs/ingest<br/>
+</body>
+</html>
+
+[2021/07/08 07:46:28] [ warn] [engine] failed to flush chunk '1-1625730386.941829702.flb', retry in 8 seconds: task_id=1, input=tail.0 > output=http.0 (out_id=0)
+[2021/07/08 07:46:28] [ warn] [engine] failed to flush chunk '1-1625730386.758710294.flb', retry in 10 seconds: task_id=0, input=tail.0 > output=http.0 (out_id=0)
+[2021/07/08 07:46:35] [error] [output:http:http.0] ec2-34-243-26-131.eu-west-1.compute.amazonaws.com:9999, HTTP status=400
+<html>
+<head><title>
+Error: 400 Bad Request</title></head>
+<body>Error: 400 Bad Request<br/>Uri: /e/bix24852/api/v2/logs/ingest<br/>
+</body>
+</html>
+
+[2021/07/08 07:46:35] [ warn] [engine] chunk '1-1625730386.941829702.flb' cannot be retried: task_id=1, input=tail.0 > output=http.0
+[2021/07/08 07:46:37] [error] [output:http:http.0] ec2-34-243-26-131.eu-west-1.compute.amazonaws.com:9999, HTTP status=400
+<html>
+<head><title>
+Error: 400 Bad Request</title></head>
+<body>Error: 400 Bad Request<br/>Uri: /e/bix24852/api/v2/logs/ingest<br/>
+</body>
+</html>
+
+[2021/07/08 07:46:37] [ warn] [engine] chunk '1-1625730386.758710294.flb' cannot be retried: task_id=0, input=tail.0 > output=http.0

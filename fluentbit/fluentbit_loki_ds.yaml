@@ -1,0 +1,94 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  annotations:
+    deprecated.daemonset.template.generation: "1"
+    meta.helm.sh/release-name: loki
+    meta.helm.sh/release-namespace: default
+  generation: 1
+  labels:
+    app: fluent-bit-loki
+    app.kubernetes.io/managed-by: Helm
+    chart: fluent-bit-2.2.0
+    heritage: Helm
+    release: loki
+  name: loki-fluent-bit-loki
+  namespace: default
+  resourceVersion: "103336341"
+spec:
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      app: fluent-bit-loki
+      release: loki
+  template:
+    metadata:
+      annotations:
+        checksum/config: 767253d8b1d65e24434729e4133daf08838091982746b2392ecbeef31fc96dd9
+        prometheus.io/path: /api/v1/metrics/prometheus
+        prometheus.io/port: "2020"
+        prometheus.io/scrape: "true"
+      creationTimestamp: null
+      labels:
+        app: fluent-bit-loki
+        release: loki
+    spec:
+      affinity: {}
+      containers:
+      - image: grafana/fluent-bit-plugin-loki:2.1.0-amd64
+        imagePullPolicy: IfNotPresent
+        name: fluent-bit-loki
+        ports:
+        - containerPort: 2020
+          name: http-metrics
+          protocol: TCP
+        resources:
+          limits:
+            memory: 100Mi
+          requests:
+            cpu: 100m
+            memory: 100Mi
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /fluent-bit/etc
+          name: config
+        - mountPath: /run/fluent-bit
+          name: run
+        - mountPath: /var/log
+          name: varlog
+        - mountPath: /var/lib/docker/containers
+          name: varlibdockercontainers
+          readOnly: true
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      serviceAccount: loki-fluent-bit-loki
+      serviceAccountName: loki-fluent-bit-loki
+      terminationGracePeriodSeconds: 10
+      tolerations:
+      - effect: NoSchedule
+        key: node-role.kubernetes.io/master
+      volumes:
+      - configMap:
+          defaultMode: 420
+          name: loki-fluent-bit-loki
+        name: config
+      - hostPath:
+          path: /run/fluent-bit
+          type: ""
+        name: run
+      - hostPath:
+          path: /var/log
+          type: ""
+        name: varlog
+      - hostPath:
+          path: /var/lib/docker/containers
+          type: ""
+        name: varlibdockercontainers
+  updateStrategy:
+    rollingUpdate:
+      maxUnavailable: 1
+    type: RollingUpdate
+

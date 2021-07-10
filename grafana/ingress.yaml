@@ -1,0 +1,8 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: grafana-ingress
+spec:
+  backend:
+    serviceName: prometheus-grafana
+    servicePort: 3000
