@@ -37,7 +37,7 @@ gcloud containr clusters create isitobservable \
 ### 3.Clone Github repo
 ```
 git clone https://github.com/isItObservable/Episode3--Kubernetes-Fluentbit.git
-cd Episode2--Kubernetes-Loki
+cd Episode3--Kubernetes-Fluentbit
 ```
 ### 4. Deploy Prometheus
 #### HipsterShop
