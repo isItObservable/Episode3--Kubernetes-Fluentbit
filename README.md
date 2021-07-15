@@ -36,7 +36,7 @@ gcloud containr clusters create isitobservable \
 ```
 ### 3.Clone Github repo
 ```
-git clone https://github.com/isItObservable/Episode2--Kubernetes-Loki
+git clone https://github.com/isItObservable/Episode3--Kubernetes-Fluentbit.git
 cd Episode2--Kubernetes-Loki
 ```
 ### 4. Deploy Prometheus
@@ -111,7 +111,7 @@ kubectl get ingress grafana-ingress -ojson | jq  '.status.loadBalancer.ingress[]
 ```
 helm repo add loki https://grafana.github.io/loki/charts
 helm repo update
-helm upgrade --install loki loki/loki-stack -set fluent-bit.enabled=true,promtail.enabled=false
+helm upgrade --install loki loki/loki-stack --set fluent-bit.enabled=true,promtail.enabled=false
 ```
 #### Configure Grafana 
 In order to build a dashboard with data stored in Loki,we first need to add a new DataSource.
