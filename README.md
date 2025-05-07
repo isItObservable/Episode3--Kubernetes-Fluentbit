@@ -1,11 +1,11 @@
-# How to configure Fluentbit to collect Logs for our K8S cluster
+# How to configure Fluent Bit to collect Logs for our K8S cluster
 
 This repository is here to guide you through the GitHub tutorial that goes hand-in-hand with a video available on YouTube and a detailed blog post on my website. 
 Together, these resources are designed to give you a complete understanding of the topic.
 
 
 Here are the links to the related assets:
-- YouTube Video: [How to configure Fluentbit to collect Logs for our K8S cluster](https://www.youtube.com/watch?v=KJlWV5-o8v0)
+- YouTube Video: [How to configure Fluent Bit to collect Logs for our K8S cluster](https://www.youtube.com/watch?v=KJlWV5-o8v0)
 - Blog Post: [How to configure Fluent Bit to collect logs for your Kubernetes cluster](https://isitobservable.io/observability/kubernetes/how-to-configure-fluent-bit-to-collect-logs-for-your-k8s-cluster)
 
 
